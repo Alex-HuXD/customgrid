@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap");
+
+:root {
+  /* color */
+  --neoGreen: #32ee32;
+  --background: rgba(58, 78, 67, 0.75);
+  --video-overlay: rgba(0, 0, 0, 0.3);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: "Zen Tokyo Zoo", cursive;
+  color: var(--neoGreen);
+}
+
+/* Video Background */
+.video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -99;
+}
+
+.video-overlay {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -99;
+  background: var(--video-overlay);
+}
+
+/* Container */
+.container {
+  width: 100vw;
+  height: auto;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+}
+
+.grid-initiator {
+  position: relative;
+  top: 20px;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  animation: title-animation 3s infinite;
+}
+
+/* Form */
+.form {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-left: 10px;
+  display: block;
+  margin-top: 1.1rem;
+}
+
+select {
+  display: block;
+  width: 100%;
+  height: 2.2rem;
+}
+input {
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 9px;
+  font-family: "Zen Tokyo Zoo", cursive;
+  font-size: 1.2rem;
+}
+
+/* grid-container */
+.grid-container {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* grid */
+.grid {
+  width: 100%;
+  height: 75vh;
+  display: grid;
+  grid-gap: 0.2rem;
+  border: solid white 1px;
+  box-shadow: 0 0 8px white;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+/* boxes */
+.box-container {
+  width: 100%;
+  height: auto;
+  background: var(--background);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  min-height: 3rem;
+  min-width: 3rem;
+  background: rgb(93, 128, 23);
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button */
+button {
+  font-family: "Zen Tokyo Zoo", cursive;
+  font-weight: bold;
+}
+
+#init-btn {
+  width: 100%;
+  height: 2.2rem;
+  margin: 1.6rem 0 5rem 0;
+  border: none;
+  text-transform: uppercase;
+  background: var(--neoGreen);
+  color: white;
+  cursor: pointer;
+  outline: none;
+}
+
+#add-box,
+#reset-grid,
+#reset-size {
+  color: rgb(1, 24, 10);
+  background: var(--neoGreen);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+button:hover {
+  filter: brightness(130%);
+  box-shadow: 0 0 0.8rem var(--neoGreen);
+}
+
+/* animation */
+
+@keyframes title-animation {
+  0% {
+    text-shadow: 0 0 2rem rgba(256, 256, 256, 0.6);
+  }
+
+  50% {
+    text-shadow: 0 0 2rem var(--neoGreen);
+    scale: 1.1;
+  }
+
+  100% {
+    text-shadow: 0 0 2rem rgba(256, 256, 256, 0.6);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .box-container {
+    flex-direction: column;
+  }
+
+  .remove-box {
+    scale: 0.5;
+  }
+}
