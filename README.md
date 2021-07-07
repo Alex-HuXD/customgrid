@@ -1,7 +1,7 @@
 # custom-grid
 
 
-## live view at [https://alex-huxd.github.io/customgrid/]
+## [live view](https://alex-huxd.github.io/customgrid/)
 
 ### Creating a grid and displaying the grid is separated into different views.
 ### This design decision is made to maximize the display area of the grid, 
