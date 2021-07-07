@@ -4,7 +4,8 @@
 ##live view at [https://alex-huxd.github.io/customgrid/]
 
 ### Creating a grid and displaying the grid is separated into different views.
-### This design decision is made to maximize the display area of the grid, therefore improve the experience for the user when creating a grid with many columns .
+### This design decision is made to maximize the display area of the grid, 
+### therefore improve the experience for the user when creating a grid with many columns .
 
 
 
