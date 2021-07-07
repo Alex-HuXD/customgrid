@@ -35,8 +35,8 @@
                     <option value="8">8</option>
                     <option value="9">9</option>
                 </select>
-                <label for="custom-picker">Type in your own number of columns (Optional)</label>
-                <input type="text" id="custom-picker" placeholder="will overwrite the value selected from dropdown">
+                <label for="custom-picker">custom column number, numbers only (Optional, 1-99)</label>
+                <input type="text" id="custom-picker"  pattern="[1-9]{2}" placeholder="will overwrite the value selected from dropdown">
                 <button type="submit" id="init-btn">CREATE GRID</button>  
             </form>        
         </div>
